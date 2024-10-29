@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asif Ahmad (quiz game)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Registration Form Container -->
+     <div id="registration-container" class="container">
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="education" placeholder="Education" required>
+        <button class="neon-btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="result-container" class="container" style="display: none;">
+        <h2>Your Score: <span id="score"></span></h2>
+        <button id="restart-btn" class="neon-btn" onclick="restartQuiz()">Restart Quiz</button>
+        <button id="show-mistakes-btn" class="neon-btn" onclick="showMistakes()">Show Mistakes</button>
+    </div>
+    
+    <!-- Container to display incorrect answers -->
+    <div id="mistakes-container" style="display: none; text-align: left;"></div>
+    <div id="quiz-container" class="container">
+        <div id="timer">Time Remaining: 10 seconds</div>
+        <h2 id="question"></h2>
+        <div id="options">
+            <button class="option-btn" onclick="selectOption(0)"></button>
+            <button class="option-btn" onclick="selectOption(1)"></button>
+            <button class="option-btn" onclick="selectOption(2)"></button>
+            <button class="option-btn" onclick="selectOption(3)"></button>
+        </div>
+        <button id="next-btn" style="display: none;" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Result Container -->
+    <div id="result-container" class="container">
+        <h2>Your Score: <span id="score"></span></h2>
+        <button class="neon-btn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+    
+    <div id="quiz-container">
+        
+        <h2 id="question">Question will appear here</h2>
+        <div class="options">
+       
+            <button class="option-btn" onclick="selectOption(0)">Option 1</button>
+            <button class="option-btn" onclick="selectOption(1)">Option 2</button>
+            <button class="option-btn" onclick="selectOption(2)">Option 3</button>
+            <button class="option-btn" onclick="selectOption(3)">Option 4</button>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+    </div>
+    <div id="result-container">
+        <h2>Your Score: <span id="score"></span>/10</h2>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
